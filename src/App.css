@@ -11,3 +11,11 @@ body{
   --main-color:#50b7f5;
   --background:#e6ecf0;
 }
+
+.paddingRight {
+  padding-right: 0px !important;
+}
+
+.paddingLeft {
+  padding-left: 0px !important;
+}

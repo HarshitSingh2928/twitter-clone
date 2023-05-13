@@ -11,10 +11,12 @@ const MiddleSection = ({ tweets, handleNewTweets, handleDelete, handleTweetEdit 
   };
   const handleLogout=()=>{
     setLoggedIn(false);
-  }
+  }  
+
+  let screenHeight = window.innerHeight;
 
   return (
-    <div className='middlesection'>
+    <div className='middlesection' style={{height: screenHeight}}>
       {/* Header */}
       <div className='nav-bar'>
         <h2>Home</h2>
