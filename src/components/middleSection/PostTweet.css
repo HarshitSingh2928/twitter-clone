@@ -1,0 +1,43 @@
+.posttweet{
+padding-bottom: 10px;
+padding-right: 10px;
+border-bottom: 8px solid var(--background);
+}
+.posttweet form{
+    display: flex;
+    flex-direction: column;
+}
+.tweetbox{
+    padding: 20px;
+    display: flex;
+}
+.tweetbox input{
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+input:focus-visible {
+    border: none !important;
+}
+.tweet-post-btn{
+    background-color: var(--main-color) !important  ;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    width: 100px !important;
+    margin-top: 20px !important;
+    margin-left: auto !important;
+}
+.avatar{
+    height: 50px !important;
+    width: 50px;
+    max-width: 50px !important;
+    /* height: auto; */
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}

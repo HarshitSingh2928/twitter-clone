@@ -1,0 +1,33 @@
+.middlesection {
+    flex: 0.4;
+    border-right: 1px solid var(--background);
+    min-width: fit-content;
+    
+    overflow-y: scroll;
+    /* check */
+}
+.middlesection::-webkit-scrollbar{
+    display: none;
+    /* check */
+}
+.nav-bar {
+    position: sticky;
+    border : 1px solid var(--background);
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-bar h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+.nav-bar button{
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+}

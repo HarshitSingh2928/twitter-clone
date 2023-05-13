@@ -1,0 +1,44 @@
+.avatar_tweet{
+    height:50px;
+    width: 50px;
+    padding: 10px 0px 0px 10px;
+}
+.tweets{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--background);
+    padding-bottom: 10px;
+}
+
+.tweetbody{
+flex: 1;
+padding: 10px ;
+}
+.tweetheadertext h3{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.tweetheaderdesc{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.tweetfooter{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.username{
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+.icons{
+    display: flex;
+    cursor: pointer;
+   
+}
+.icons p{
+padding-left: 5px;
+    font-size: small;
+    
+}
