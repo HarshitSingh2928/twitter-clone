@@ -1,18 +1,20 @@
 import React from 'react'
 import ParentComponent from './ParentComponent'
 import LeftSection from './leftSection/LeftSection'
+import { Container, Row, Col } from 'react-bootstrap';
 import '../App.css'
 import { Link } from 'react-router-dom';
 const HomePage = ({setLoggedIn}) => {
   return (
-   
+   <Container>
+    <Row>
     <div className="App">
-    {/* LeftSection */}
-
-    <LeftSection/>
-    <ParentComponent setLoggedIn={setLoggedIn}/>
+   <Col md={3}><LeftSection/></Col> 
+   <Col md={9}><ParentComponent setLoggedIn={setLoggedIn}/></Col>
+    
   </div>
-  
+  </Row>
+  </Container>
   )
 }
 
