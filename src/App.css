@@ -7,9 +7,9 @@
   margin-right: auto;
   padding: 0 10px;
 }
-body{
-  --main-color:#50b7f5;
-  --background:#e6ecf0;
+body {
+  --main-color: #50b7f5;
+  --background: #e6ecf0;
 }
 
 .paddingRight {
@@ -18,4 +18,9 @@ body{
 
 .paddingLeft {
   padding-left: 0px !important;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
