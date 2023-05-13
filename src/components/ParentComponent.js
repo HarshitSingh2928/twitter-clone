@@ -8,12 +8,6 @@ const ParentComponent = ({ setLoggedIn }) => {
   const [tweets, setTweets] = useState([]);
   const [filteredTweets, setFilteredTweets] = useState([]);
 
-  const handleSearch = (input) => {
-    const filtered = tweets.filter((tweet) =>
-      tweet.tweet.toLowerCase().includes(input.toLowerCase())
-    );
-    setFilteredTweets(filtered);
-  };
   // const data = [
   //     {
   //         "id": 0,
@@ -111,6 +105,17 @@ const ParentComponent = ({ setLoggedIn }) => {
   //     }
 
   // ]
+  useEffect(() => {
+    fetch("https://tweets.free.beeceptor.com/tweets/all")
+      .then((response) => response.json())
+      .then((data) => {
+        setTweets(data);
+        setFilteredTweets(data);
+      })
+      .catch((error) => console.error(error));
+    // setTweets(data);
+    // setFilteredTweets(data);
+  }, []);
 
   const handleNewTweet = (newTweet) => {
     const updatedTweets = [...tweets];
@@ -123,7 +128,7 @@ const ParentComponent = ({ setLoggedIn }) => {
       numberOfComments: 0,
       firstName: "Harshit",
     };
-    updatedTweets.unshift(newTweetObject); // Add the new tweet at the beginning of the array
+    updatedTweets.unshift(newTweetObject);
     console.log(updatedTweets);
     setTweets(updatedTweets);
     setFilteredTweets(updatedTweets);
@@ -145,22 +150,19 @@ const ParentComponent = ({ setLoggedIn }) => {
     setTweets(updatedTweets);
     setFilteredTweets(updatedTweets);
   };
-  useEffect(() => {
-    fetch("https://tweets.free.beeceptor.com/tweets/all")
-      .then((response) => response.json())
-      .then((data) => {
-        setTweets(data);
-        setFilteredTweets(data);
-      })
-      .catch((error) => console.error(error));
-    // setTweets(data);
-    // setFilteredTweets(data);
-  }, []);
+
+  const handleSearch = (input) => {
+    const filtered = tweets.filter((tweet) =>
+      tweet.tweet.toLowerCase().includes(input.toLowerCase())
+    );
+    setFilteredTweets(filtered);
+  };
+
   return (
-    // <Container>
+    <Container>
       <Row>
         <div style={{ display: "flex" }}>
-          <Col md={8}>
+          <Col md={9}>
             {" "}
             <MiddleSection
               tweets={filteredTweets}
@@ -176,7 +178,7 @@ const ParentComponent = ({ setLoggedIn }) => {
           </Col>
         </div>
       </Row>
-    // </Container>
+    </Container>
   );
 };
 

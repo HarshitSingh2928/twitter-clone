@@ -8,11 +8,11 @@ const HomePage = ({ setLoggedIn }) => {
   return (
     <Container>
       <Row>
-        {/* <div className="App"> */}
+      
         <Col md={3} className='paddingRight'><LeftSection /></Col>
         <Col md={9} className='paddingLeft'><ParentComponent setLoggedIn={setLoggedIn} /></Col>
 
-        {/* </div> */}
+        
       </Row>
     </Container>
   )

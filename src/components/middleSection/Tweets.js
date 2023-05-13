@@ -37,7 +37,6 @@ const Tweets = ({
   };
 
   const handleSaveEdit = () => {
-    // TODO: save the edited tweet
     setIsEditing(false);
     handleEdits(editedTweet, id);
   };
