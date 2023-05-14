@@ -12,6 +12,7 @@ Brief description of the project.
 
 - Post your own tweet
 - Edit and delete any tweet
+- Search for tweets
 - Check profile page
 - Login/Logout
 
