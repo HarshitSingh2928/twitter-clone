@@ -4,7 +4,7 @@ import UserProfilePage from './components/profilePage/UserProfilePage';
 import LoginPage from './components/Login/LoginPage';
 import { useState } from 'react';
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <Router>
       {/* <HomePage/> */}
