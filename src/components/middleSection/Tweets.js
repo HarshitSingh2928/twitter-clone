@@ -45,7 +45,12 @@ const Tweets = ({
     setEditedTweet(tweet);
     setIsEditing(false);
   };
+  const tweetDate = new Date(date);
+  const currentDate = new Date();
 
+  const timeDifferenceMs = currentDate - tweetDate;
+  const timeDifferenceHours = Math.floor(timeDifferenceMs / (1000 * 60 * 60));
+  const timeDifferenceDays = Math.floor(timeDifferenceHours / 24);
   return (
     <div className="tweets">
       <Figure>
@@ -57,6 +62,13 @@ const Tweets = ({
             <h3>
               {firstName} <span className="username">@{userName}</span>
             </h3>
+            <p>
+              {timeDifferenceDays > 30
+                ? "30d+"
+                : timeDifferenceDays >= 1
+                ? `${timeDifferenceDays}d`
+                : `${timeDifferenceHours}h`}
+            </p>
           </div>
           <div className="tweetheaderdesc">
             {isEditing ? (
