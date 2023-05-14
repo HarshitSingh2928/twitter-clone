@@ -12,7 +12,7 @@ const UserProfilePage = () => {
   //   country: "Sweden"
   //   }
   useEffect(() => {
-    fetchProfileData();
+   fetchProfileData();
   }, []);
   const fetchProfileData = async () => {
     try {
